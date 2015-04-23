@@ -1,0 +1,255 @@
+*{
+  #background-color: black;
+  #z-index:-1;
+  text-decoration:none;
+  color:#D3C5A4;
+}
+  
+body {
+     background-image:url("../imagen/corteza1.jpg");
+	 background-repeat:no-repeat;
+	 background-size:cover;
+     font: 100% "Times New Roman", Times, serif; 
+     height:100%;# min-height:100%
+}
+	 
+h1{
+   font-size: 2.6em; 
+     color:#D3C5A4;
+}
+section{
+		margin:7%;
+		#border: 1px solid white;
+		width:100%}
+h2{font-size:110%;
+    margin:1%;
+	position:relative;
+	left:2%;
+	
+	#border: 1px solid white;}
+ul{margin:0%;
+padding-left:6%;
+#border: 1px solid white;
+}
+li´{#border: 1px solid white;
+padding:0%;}   
+div#toparea{position:absolute;
+            left:20%;
+			width:60%;
+			height:100%;
+			#border:6px solid white;
+			
+			
+}
+header{
+		   position: relative;
+		   float: Left;
+		   margin: 5px;
+		   padding: 10px;
+		   width: 330px;
+		   #height: 110px;
+		   #border: 2px solid black;
+}
+p#p1{
+	position: absolute;
+	margin:0px;
+	padding:5px;
+	top:87px;
+    left:3px;
+}
+p{color:#D3C5A4;
+ #text-align: left
+}
+div.info{position: absolute;
+		right:16%;
+		}
+nav .barra{
+	font-size:150%;
+	margin:3%;
+	height:30%;
+	width:30%;
+	#border: 1px solid white;
+	}
+	a.barra:hover {
+    background-color: gray;
+}
+
+nav{
+	position:absolute;
+	top:10%;
+	left:35%;
+	height:auto;
+	width:50%;
+	#border: 1px solid white;
+}
+
+	.transbox {
+   # margin: 1;
+    background-color:rgba(0,0,0,0.7);
+	position:absolute;
+    top:6%;
+    left:55%;
+    padding: 1%;
+    width: 42%;
+    height:70%;
+	#z-index:-1;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	#border: 1px solid white;
+}
+.transbox1 {
+   # margin: 1;
+    background-color:rgba(0,0,0,0.7);
+	position:absolute;
+    top:0%;
+    left:0%;
+    padding: 0%;
+    width: 100%;
+    height:100%;
+	#z-index:-1;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	#border: 1px solid white;
+}
+.transbox3{
+   # margin: 1;
+    background-color:rgba(0,0,0,0.5);
+	position:absolute;
+    top:6%;
+    left:23%;
+    padding: 1%;
+    width: 42%;
+    height:70%;
+	#z-index:-1;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	#border: 1px solid white;
+}
+.transbox h2{ font-size: 1.6em; 
+			color: #D3C5A4; 
+			padding-bottom: 10px }
+.transbox p {position:absolute;
+	top:30%;
+	bottom:0%;
+    margin: 5%;
+    #font-weight: bold;
+    color: #D3C5A4;
+	opacity:1;
+	overflow:auto;
+	font-size: 110%; #line-height: 16px;
+	color: #CBB899;
+	#padding-bottom: 16px ;
+	#border: 1px solid white;
+	}
+div.imagen{
+     background-image:url("../imagen/fogon.jpg");
+	 background-repeat:no-repeat;
+	 background-size:cover;
+   	 position:absolute;
+     top:25%;
+     left:15%;
+    # padding:2%;
+     width: 70%;
+     height:50%;
+	 #border: 1px solid white;
+}  
+div.imagen2{
+     #background-image:url("../imagen/fogon.jpg");
+	 background-repeat:no-repeat;
+	 background-size:cover;
+   	 position:absolute;
+     top:25%;
+     left:15%;
+    # padding:2%;
+     width: 70%;
+     height:50%;
+	 #border: 1px solid white;
+}  
+div.imagen3{
+     background-image:url("../imagen/gardey.jpg");
+	 background-repeat:no-repeat;
+	 background-size:cover;
+   	 position:absolute;
+     top:25%;
+     left:10%;
+    # padding:2%;
+     width: 70%;
+     height:50%;
+	 #border: 1px solid white;
+	 }
+div.formulario{
+background-color:rgba(0,0,0,0.5);
+    position:absolute;
+	top:80%;
+	float:left;
+	height:10%;
+	width:100%;
+	border: 1px solid black;  
+}
+
+form{
+		display:inline;}
+h3{  
+	font-size: 130%; 
+	line-height: 33px; 
+	color: #CBBD9D; 
+	padding-top: 2px ;
+	float:left;
+	margin:1%;
+	#border: 1px solid black;
+	width:9%;}
+
+form p{
+width:12%;
+float:left;
+margin:1%;
+#border: 1px solid white; 
+} 
+input{width:90%;
+     background-color:#CBBD9D;
+	 color:black;}
+input[type=submit]{
+	top:10%;
+	!font-size:100%;
+	padding:5%;
+	background-color: #000000;
+	color:#CBBD9D;
+	border:1px solid #CBBD9D;}
+footer{
+	position:absolute;
+	bottom:0%;
+	left:0%;
+	height:10%;
+	width:100%;
+	margin:0%;
+	#display:inline;
+	#border: 1px solid white;
+	
+}
+footer p{#position :absolute;
+		#bottom:5%;
+		text-align:center;
+		}
+.panel1{#border: 1px solid white;
+width:50%;}
+.panel2{#border: 1px solid white;
+		position:absolute;
+		left:60%;
+		top:0%;
+		width:50%}
+h2.menu{ font-size: 1.6em; 
+			color: #D3C5A4; 
+			text-align:center;
+			top:5%;
+			 }		
+table, th, td {
+    border: 1px solid #CBBD9D;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+	width:30;
+}
+table {position:relative;
+	top:12%;
+    width: 100%;    
+    #background-color: #CBBD9D;
+}
