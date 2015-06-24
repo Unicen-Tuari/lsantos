@@ -6,13 +6,20 @@
 }
   
 body {
-     background-image:url("../imagen/corteza1.jpg");
+
+    # background-image:url("../imagen/corteza1.jpg");
+	 #background-position: center;
 	 background-repeat:no-repeat;
 	 background-size:cover;
-     font: 100% "Times New Roman", Times, serif; 
-     height:100%;# min-height:100%
+     font: 150% "Times New Roman", Times, serif; 
+    # height:100%;# min-height:100%;
+	max-width: 100%;
+	height: auto; 
+	display: block;
 }
-	 
+div.cover-image{
+background-image:url("../imagen/fogon");
+}	 
 h1{
    font-size: 2.6em; 
      color:#D3C5A4;
@@ -70,6 +77,7 @@ nav .barra{
 	width:30%;
 	#border: 1px solid white;
 	}
+	a{color:#D3C5A4}
 	a.barra:hover {
     background-color: gray;
 }
@@ -253,4 +261,3 @@ table {position:relative;
     width: 100%;    
     #background-color: #CBBD9D;
 }
-
