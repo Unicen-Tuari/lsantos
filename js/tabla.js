@@ -65,7 +65,7 @@ $('document').ready(function(){
 	};
 
 	
-	leerGrupo(grupo);
+	/* leerGrupo(grupo); */
 
 	
 	$('#agregar-menu').on('click', function(event){
