@@ -3,7 +3,30 @@ $('document').ready(function(){
 	// Definicion de Variables
 	grupo = 41;
 
-		
+		function leerGrupo(grupo){
+		$.ajax({
+			type: 'GET',
+			dataType: 'JSON',
+			url: 'http://web-unicen.herokuapp.com/api/group/' + grupo,
+			success: function(data){
+						var horario = '';
+						var sabado = '';
+						var domingo = '';
+						var registro = '';
+						$('#menu-lista').html('');
+						for (var i = 0 ; i < data.information.length ; i++){
+							horario = data.information[i]['thing'][0];
+							sabado = data.information[i]['thing'][1];
+							domingo = data.information[i]['thing'][2];
+							registro = '<tr><td class="horario">' + horario + '</td><td>' + sabado + '</td><td>' + domingo	+  '</td></tr>';
+							$('#menu-lista').append(registro);
+						}
+					},
+			error: function(){
+						alert('Error al Cargar la Tabla de Menu');
+					}
+		});
+	};
 		function cargarMenu(grupo){
 			var horario = $('#horario').val();
 			$('#horario').val('');
@@ -39,33 +62,10 @@ $('document').ready(function(){
 		};
 
 	
-	function leerGrupo(grupo){
-		$.ajax({
-			type: 'GET',
-			dataType: 'JSON',
-			url: 'http://web-unicen.herokuapp.com/api/group/' + grupo,
-			success: function(data){
-						var horario = '';
-						var sabado = '';
-						var domingo = '';
-						var registro = '';
-						$('#menu-lista').html('');
-						for (var i = 0 ; i < data.information.length ; i++){
-							horario = data.information[i]['thing'][0];
-							sabado = data.information[i]['thing'][1];
-							domingo = data.information[i]['thing'][2];
-							registro = '<tr><td class="horario">' + horario + '</td><td>' + sabado + '</td><td>' + domingo	+  '</td></tr>';
-							$('#menu-lista').append(registro);
-						}
-					},
-			error: function(){
-						alert('Error al Cargar la Tabla de Menu');
-					}
-		});
-	};
+	
 
 	
-	/* leerGrupo(grupo); */
+	 /* leerGrupo(grupo);  */
 
 	
 	$('#agregar-menu').on('click', function(event){
