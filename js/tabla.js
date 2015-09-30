@@ -1,7 +1,7 @@
 $('document').ready(function(){
 
 	// Definicion de Variables
-	grupo = 41;
+	var grupo = 41;
 
 		function leerGrupo(grupo){
 		$.ajax({
@@ -34,7 +34,7 @@ $('document').ready(function(){
 			$('#sabado').val('');
 			var domingo = $('#domingo').val();
 			$('#domingo').val('');
-			
+
 			var registro = [horario, sabado, domingo];
 			var registroCompleto = {
 					'group': grupo,
@@ -61,13 +61,8 @@ $('document').ready(function(){
 			};
 		};
 
-	
-	
+	 leerGrupo(grupo);  
 
-	
-	 /* leerGrupo(grupo);  */
-
-	
 	$('#agregar-menu').on('click', function(event){
 		event.preventDefault();
 		cargarMenu(grupo);

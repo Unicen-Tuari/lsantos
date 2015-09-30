@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2015-09-30 18:02:40
+         compiled from "/opt/lampp/htdocs/lsantos/templates/header.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:27069511560c07a07b3240_69323557%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c5e7c97b278796d328ddee6782939a36ead7d8e7' => 
+    array (
+      0 => '/opt/lampp/htdocs/lsantos/templates/header.tpl',
+      1 => 1443628953,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '27069511560c07a07b3240_69323557',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_560c07a0892433_42921241',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_560c07a0892433_42921241')) {
+function content_560c07a0892433_42921241 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '27069511560c07a07b3240_69323557';
+?>
 <!DOCTYPE html>
   <head>
     <meta name="keywords" content="asado, carne al asador,parrillada">
@@ -12,8 +38,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap_custom_style.css" rel="stylesheet">
     <!--link rel="stylesheet" href="css/style.css" type="text/css" media="screen"-->
-    <script src="js/jquery.js"></script>
-    <script src="js/navegacion.js"></script>
+    <?php echo '<script'; ?>
+ src="js/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/navegacion.js"><?php echo '</script'; ?>
+>
   </head>
   <body class="cort">
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation ">
@@ -51,3 +81,6 @@
         </div>
       </div>
     </nav>
+<?php }
+}
+?>

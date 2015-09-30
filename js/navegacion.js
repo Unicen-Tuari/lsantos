@@ -5,7 +5,8 @@ $(document).ready(function(){
 	var historia = 'historia';
 	var menu = 'menu';
 	var contacto = 'contacto';
-	var gestorNoticias = 'gestorNoticias';
+	var noticia = 'noticia';
+	var noticias = 'noticias';
 
 	function cargarPagina(seccion){
 		$.ajax({
@@ -46,9 +47,13 @@ $(document).ready(function(){
 		event.preventDefault();
 		cargarPagina(contacto);
 	});
-
+	$('#not').on('click', function(event){
+		event.preventDefault();
+		cargarPagina(noticia);
+	});
 	$('#not').on('click', function(event){
 		event.preventDefault();
 		cargarPagina(noticias);
+
 	});
 });
