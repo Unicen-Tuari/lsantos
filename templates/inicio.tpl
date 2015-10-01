@@ -1,3 +1,4 @@
+        <p>
         <div class="cover" id="ini">
             <div class="cover-image cort"></div>
             <div class="container-fluid opcit">

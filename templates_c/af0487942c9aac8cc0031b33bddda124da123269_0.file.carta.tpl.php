@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 05:18:39
+<?php /* Smarty version 3.1.27, created on 2015-10-01 00:48:17
          compiled from "/opt/lampp/htdocs/lsantos/templates/carta.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:972510157560b548f48b856_74934572%%*/
+/*%%SmartyHeaderCode:1274238798560c66b18c9995_47624095%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,28 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'af0487942c9aac8cc0031b33bddda124da123269' => 
     array (
       0 => '/opt/lampp/htdocs/lsantos/templates/carta.tpl',
-      1 => 1443100768,
+      1 => 1443653289,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '972510157560b548f48b856_74934572',
+  'nocache_hash' => '1274238798560c66b18c9995_47624095',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560b548f4e1ea5_57540863',
+  'unifunc' => 'content_560c66b194d202_56054038',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560b548f4e1ea5_57540863')) {
-function content_560b548f4e1ea5_57540863 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560c66b194d202_56054038')) {
+function content_560c66b194d202_56054038 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '972510157560b548f48b856_74934572';
+$_smarty_tpl->properties['nocache_hash'] = '1274238798560c66b18c9995_47624095';
 ?>
-
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <h1 class="text-center text-invert">Carta</h1>
-
-      <br>
     </div>
   </div>
   <div class="row">

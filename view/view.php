@@ -39,4 +39,4 @@ function mostrar($a){
 
 }
 ?>
-<br>
+.

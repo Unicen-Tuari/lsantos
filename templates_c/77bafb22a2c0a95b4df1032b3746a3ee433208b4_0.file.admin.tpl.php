@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 21:54:11
+<?php /* Smarty version 3.1.27, created on 2015-10-01 04:56:10
          compiled from "/opt/lampp/htdocs/lsantos/templates/admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1221376733560c3de3208ba8_06836035%%*/
+/*%%SmartyHeaderCode:1935577704560ca0caa82967_93701455%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77bafb22a2c0a95b4df1032b3746a3ee433208b4' => 
     array (
       0 => '/opt/lampp/htdocs/lsantos/templates/admin.tpl',
-      1 => 1443642830,
+      1 => 1443668166,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1221376733560c3de3208ba8_06836035',
+  'nocache_hash' => '1935577704560ca0caa82967_93701455',
   'variables' => 
   array (
     'tareas' => 0,
@@ -26,16 +26,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560c3de32d9345_83234517',
+  'unifunc' => 'content_560ca0cab0b7e0_12550097',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560c3de32d9345_83234517')) {
-function content_560c3de32d9345_83234517 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560ca0cab0b7e0_12550097')) {
+function content_560ca0cab0b7e0_12550097 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1221376733560c3de3208ba8_06836035';
+$_smarty_tpl->properties['nocache_hash'] = '1935577704560ca0caa82967_93701455';
 ?>
 <!DOCTYPE HTML>
-<!DOCTYPE html>
   <head>
     <meta name="keywords" content="asado, carne al asador,parrillada">
     <meta name="description" content="Asador criollo y restaurant estilo campo">
@@ -49,6 +48,12 @@ $_smarty_tpl->properties['nocache_hash'] = '1221376733560c3de3208ba8_06836035';
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap_custom_style.css" rel="stylesheet">
     <!--link rel="stylesheet" href="css/style.css" type="text/css" media="screen"-->
+    <?php echo '<script'; ?>
+ src="//code.jquery.com/jquery-1.11.3.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
   </head>
   <body class="cort">
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation ">
@@ -71,13 +76,13 @@ $_smarty_tpl->properties['nocache_hash'] = '1221376733560c3de3208ba8_06836035';
               <a target="_blank" href="http://localhost/lsantos/index.php?">Carta</a>
             </li>
             <li>
-              <a id="hi" >Historia/Ubicacion</a>
+              <a id="hi" ></a>
             </li>
             <li>
-              <a id="me" >Menu</a>
+              <a id="me" ></a>
             </li>
             <li>
-              <a id="co" >Contacto</a>
+              <a id="co" ></a>
             </li>
           </ul>
         </div>
@@ -131,11 +136,9 @@ $_smarty_tpl->tpl_vars['categoria'] = $foreach_categoria_Sav;
 ?>
                   <?php }?>
                   <a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task=<?php echo $_smarty_tpl->tpl_vars['tarea']->value['id'];?>
+"></a>
+                 <a class="glyphicon glyphicon-plus botonAgregarImagenes" href="index.php?action=agregar_imagenes&id_task=<?php echo $_smarty_tpl->tpl_vars['tarea']->value['id'];?>
 "></a></h4>
-                  <a class="btn bnt-default botonAgregarImagenes" href="index.php?action=agregar_imagenes&id_task=<?php echo $_smarty_tpl->tpl_vars['tarea']->value['id'];?>
-">Agregar imagen</a>
-                  <!--a class="glyphicon glyphicon-ok" href="index.php?action=realizar_tarea&id_task=<?php echo $_smarty_tpl->tpl_vars['tarea']->value['id'];?>
-"></a-->
                   <?php
 $_from = $_smarty_tpl->tpl_vars['tarea']->value['imagenes'];
 if (!is_array($_from) && !is_object($_from)) {
@@ -150,7 +153,7 @@ $foreach_imagen_Sav = $_smarty_tpl->tpl_vars['imagen'];
                   <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['path'];?>
 " alt="imagen-<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id'];?>
 -tarea-<?php echo $_smarty_tpl->tpl_vars['tarea']->value['id'];?>
-" class="img-thumbnail" />
+" class="img-thumbnail" >
                   <?php
 $_smarty_tpl->tpl_vars['imagen'] = $foreach_imagen_Sav;
 }
@@ -228,7 +231,7 @@ $_smarty_tpl->tpl_vars['categoria'] = $foreach_categoria_Sav;
             </div>
             <div class="form-group">
               <label for="imagesToUpload">Imagenes</label>
-              <input type="file"  name="imagesToUpload[]" id="imagesToUpload" multiple>
+              <input type="file"  name="imagesToUpload[]" id="imagesToUpload" >
             </div>
             <button type="submit" class="btn btn-default">Agregar Noticia</button>
           </form>
@@ -275,49 +278,48 @@ $_smarty_tpl->tpl_vars['categoria'] = $foreach_categoria_Sav;
       </div>
     </div>
     <?php echo '<script'; ?>
->
-    $(".botonAgregarImagenes").on("click", function(event){
-       event.preventDefault();
-
-       var archivos = $("#imagesToUpload").prop('files');
-
-       if(typeof(archivos) == 'null'){
-         alert("Elige una imagen para agregar");
-         return;
-       }
-
-       var datos = new FormData();
-
-       $.each(archivos, function(key,value){
-         datos.append(key,value);
-       });
-
-       $.ajax({
-         type: "POST",
-         dataType: "json",
-         url: event.target.href,
-         data: datos,
-         success: function(data){
-           alert(data.result);
-           /*$("body").html(data);*/
-
-         },
-         error: function(){
-           alert("No anduvo la llamada AJAX");
-         },
-         contentType : false,
-         processData : false
-       });
-
-     });
-   <?php echo '</script'; ?>
+ src="//code.jquery.com/jquery-1.11.3.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
-  <?php echo '<script'; ?>
- src="js/jquery.js"><?php echo '</script'; ?>
+    <?php echo '<script'; ?>
 >
+       $(".botonAgregarImagenes").on("click", function(event){
+         event.preventDefault();
+
+         var archivos = $("#imagesToUpload").prop('files');
+
+         if(typeof(archivos) == 'undefined'){
+           alert("No pusiste imagenes");
+           return;
+         }
+
+         var datos = new FormData();
+
+         $.each(archivos, function(key,value){
+           datos.append(key,value);
+         });
+
+         $.ajax({
+           type: "POST",
+           dataType: "json",
+           url: event.target.href,
+           data: datos,
+           success: function(data){
+             alert(data.result);
+           },
+           error: function(){
+             alert("No anduvo la llamada AJAX");
+           },
+           contentType : false,
+           processData : false
+         });
+
+       });
+     <?php echo '</script'; ?>
+>
+
   </body>
 </html>
 <?php }

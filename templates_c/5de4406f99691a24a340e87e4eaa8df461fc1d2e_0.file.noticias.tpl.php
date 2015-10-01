@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 20:16:24
+<?php /* Smarty version 3.1.27, created on 2015-10-01 05:10:57
          compiled from "/opt/lampp/htdocs/lsantos/templates/noticias.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1848758994560c26f85a4cc5_21539581%%*/
+/*%%SmartyHeaderCode:672259241560ca4412ea772_08105283%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5de4406f99691a24a340e87e4eaa8df461fc1d2e' => 
     array (
       0 => '/opt/lampp/htdocs/lsantos/templates/noticias.tpl',
-      1 => 1443636966,
+      1 => 1443669049,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1848758994560c26f85a4cc5_21539581',
+  'nocache_hash' => '672259241560ca4412ea772_08105283',
   'variables' => 
   array (
     'tareas' => 0,
@@ -24,22 +24,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560c26f8628b49_29741167',
+  'unifunc' => 'content_560ca4414061b6_60635101',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560c26f8628b49_29741167')) {
-function content_560c26f8628b49_29741167 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560ca4414061b6_60635101')) {
+function content_560ca4414061b6_60635101 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1848758994560c26f85a4cc5_21539581';
+$_smarty_tpl->properties['nocache_hash'] = '672259241560ca4412ea772_08105283';
 ?>
 
 <div id="conten2"class="container">
-  <div class="page-header">
-    <h1>Lista de Noticias</h1>
-  </div>
+
+
+
   <div class="row">
     <div class="col-md-6" >
-      <label class="control-label" for="nombre"></label>
+      <label class="control-label" for="nombre"><h1>Lista de Noticias</h1></label>
       <ul class="list-group" >
         <?php
 $_from = $_smarty_tpl->tpl_vars['tareas']->value;

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 05:18:34
+<?php /* Smarty version 3.1.27, created on 2015-10-01 05:03:41
          compiled from "/opt/lampp/htdocs/lsantos/templates/inicio.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:901680587560b548a56f3b8_62819664%%*/
+/*%%SmartyHeaderCode:674995055560ca28d63d5e5_29115628%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5e8ba1487056b4d8085fe27d07fb9ae1202adeda' => 
     array (
       0 => '/opt/lampp/htdocs/lsantos/templates/inicio.tpl',
-      1 => 1443126945,
+      1 => 1443668617,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '901680587560b548a56f3b8_62819664',
+  'nocache_hash' => '674995055560ca28d63d5e5_29115628',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560b548a5d65d6_24786739',
+  'unifunc' => 'content_560ca28d6754f2_39619545',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560b548a5d65d6_24786739')) {
-function content_560b548a5d65d6_24786739 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560ca28d6754f2_39619545')) {
+function content_560ca28d6754f2_39619545 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '901680587560b548a56f3b8_62819664';
+$_smarty_tpl->properties['nocache_hash'] = '674995055560ca28d63d5e5_29115628';
 ?>
+        <p>
         <div class="cover" id="ini">
             <div class="cover-image cort"></div>
             <div class="container-fluid opcit">

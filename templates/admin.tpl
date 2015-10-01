@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!DOCTYPE html>
   <head>
     <meta name="keywords" content="asado, carne al asador,parrillada">
     <meta name="description" content="Asador criollo y restaurant estilo campo">
@@ -13,6 +12,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap_custom_style.css" rel="stylesheet">
     <!--link rel="stylesheet" href="css/style.css" type="text/css" media="screen"-->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body class="cort">
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation ">
@@ -35,13 +36,13 @@
               <a target="_blank" href="http://localhost/lsantos/index.php?">Carta</a>
             </li>
             <li>
-              <a id="hi" >Historia/Ubicacion</a>
+              <a id="hi" ></a>
             </li>
             <li>
-              <a id="me" >Menu</a>
+              <a id="me" ></a>
             </li>
             <li>
-              <a id="co" >Contacto</a>
+              <a id="co" ></a>
             </li>
           </ul>
         </div>
@@ -68,11 +69,10 @@
                       {/if}
                       {/foreach}
                   {/if}
-                  <a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task={$tarea['id']}"></a></h4>
-                  <a class="btn bnt-default botonAgregarImagenes" href="index.php?action=agregar_imagenes&id_task={$tarea['id']}">Agregar imagen</a>
-                  <!--a class="glyphicon glyphicon-ok" href="index.php?action=realizar_tarea&id_task={$tarea['id']}"></a-->
+                  <a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task={$tarea['id']}"></a>
+                 <a class="glyphicon glyphicon-plus botonAgregarImagenes" href="index.php?action=agregar_imagenes&id_task={$tarea['id']}"></a></h4>
                   {foreach $tarea['imagenes'] as $imagen}
-                  <img src="{$imagen['path']}" alt="imagen-{$imagen['id']}-tarea-{$tarea['id']}" class="img-thumbnail" />
+                  <img src="{$imagen['path']}" alt="imagen-{$imagen['id']}-tarea-{$tarea['id']}" class="img-thumbnail" >
                   {/foreach}</li>
             {/foreach}
           </ul>
@@ -115,7 +115,7 @@
             </div>
             <div class="form-group">
               <label for="imagesToUpload">Imagenes</label>
-              <input type="file"  name="imagesToUpload[]" id="imagesToUpload" multiple>
+              <input type="file"  name="imagesToUpload[]" id="imagesToUpload" >
             </div>
             <button type="submit" class="btn btn-default">Agregar Noticia</button>
           </form>
@@ -146,9 +146,42 @@
         </div>
       </div>
     </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+       $(".botonAgregarImagenes").on("click", function(event){
+         event.preventDefault();
 
-    <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.js"></script>
-    <script src="js/imagenajax.js"></script>
+         var archivos = $("#imagesToUpload").prop('files');
+
+         if(typeof(archivos) == 'undefined'){
+           alert("No pusiste imagenes");
+           return;
+         }
+
+         var datos = new FormData();
+
+         $.each(archivos, function(key,value){
+           datos.append(key,value);
+         });
+
+         $.ajax({
+           type: "POST",
+           dataType: "json",
+           url: event.target.href,
+           data: datos,
+           success: function(data){
+             alert(data.result);
+           },
+           error: function(){
+             alert("No anduvo la llamada AJAX");
+           },
+           contentType : false,
+           processData : false
+         });
+
+       });
+     </script>
+
   </body>
 </html>

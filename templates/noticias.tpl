@@ -1,11 +1,11 @@
 
 <div id="conten2"class="container">
-  <div class="page-header">
-    <h1>Lista de Noticias</h1>
-  </div>
+
+
+
   <div class="row">
     <div class="col-md-6" >
-      <label class="control-label" for="nombre"></label>
+      <label class="control-label" for="nombre"><h1>Lista de Noticias</h1></label>
       <ul class="list-group" >
         {foreach $tareas as $tarea}
         <li class=""><h3>

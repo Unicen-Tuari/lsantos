@@ -1,13 +1,13 @@
 <?php
 include_once 'view/view.php';
-include_once 'model/tareas_model.php';
+include_once 'model/model.php';
 //include_once 'model/model.php';
 
  class Controller{
    private $view;
    private $model;
    function __construct(){
-       $this->model = new TareasModel();
+       $this->model = new Model();
      $this->view = new View();
 
    }
@@ -97,14 +97,14 @@ function mostrarNoticia(){
   }
 function agregarImagenes(){
     if(isset($_REQUEST['id_task']) && isset($_FILES)){
-      $this->model->agregarImagenes($_REQUEST['id_task'],$_FILES);
-
+      $this->model->agregarImagenes($_REQUEST['id_task'],$_FILES['imagesToUpload']);
+print_r($_FILES);
       echo '{ "result" :  "OK" }';
 
     }else{
       echo '{ "result" :  "Faltan paramentros" }';
     }
-  
+
 }
 
 
