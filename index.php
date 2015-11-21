@@ -1,6 +1,9 @@
 <?php
 include_once 'config/config_action.php';
 include_once 'controller/controller.php';
+include_once 'controller/admin_controller.php';
+
+
 //Tenga la clave action
 //No tenga la clave action
 //$_REQUEST['action']
@@ -44,31 +47,31 @@ else {
       break;
 
       case ConfigAct::$ACTION_MOSTRAR:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->mostrarHome();
         break;
       case ConfigAct::$ACTION_AGREGAR_TAREA:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->agregarTarea();
         break;
       case ConfigAct::$ACTION_BORRAR_TAREA:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->borrarTarea();
         break;
       case ConfigAct::$ACTION_REALIZAR_TAREA:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->realizarTarea();
         break;
       case ConfigAct::$ACTION_AGREGAR_CATEGORIA:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->agregarCategoria();
           break;
       case ConfigAct::$ACTION_BORRAR_CATEGORIA:
-        $controller = new Controller();
+        $controller = new AdminController();
         $controller->borrarCategoria();
           break;
       case ConfigAct::$ACTION_AGREGAR_IMAGENES:
-         $controller = new Controller();
+         $controller = new AdminController();
          $controller->agregarImagenes();
       break;
     default:
