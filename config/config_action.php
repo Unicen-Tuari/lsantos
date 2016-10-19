@@ -16,6 +16,7 @@
 
   public static $ACTION_AGREGAR_NOTICIA = 'agregar_noticia';
   public static $ACTION_BORRAR_NOTICIA = 'borrar_noticia';
+  public static $ACTION_MODIFICAR_NOTICIA = 'modificar_noticia';
   public static $ACTION_REALIZAR_NOTICIA = 'realizar_noticia';
 
   public static $ACTION_MOSTRAR_CATEGORIAS ='mostrar_categorias';

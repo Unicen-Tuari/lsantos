@@ -1,8 +1,8 @@
 <?php
 include_once 'view/view.php';
 //include_once 'notModel/model.php';
-//include_once 'model/noticias_model.php';
-//include_once 'model/categorias_model.php';
+include_once 'model/noticias_model.php';
+include_once 'model/categorias_model.php';
 //include_once 'model/model.php';
 
  class Controller{
@@ -14,8 +14,8 @@ include_once 'view/view.php';
    function __construct(){
        //$this->model = new Model();
        $this->view = new View();
-       //$this->noticiasModel= new NoticiasModel();
-       //$this->categoriasModel=new CategoriasModel();
+       $this->noticiasModel= new NoticiasModel();
+       $this->categoriasModel=new CategoriasModel();
 }
 
    function mostrarIndex(){

@@ -9,7 +9,7 @@ include_once 'controller.php';
 
     function mostrarHome(){
       $this->view->mostrarNoticias('admin.tpl',$this->noticiasModel->getNoticias(),$this->categoriasModel->getCategorias());
-      
+
     }
 
     function mostrarNoticia(){
@@ -34,6 +34,17 @@ include_once 'controller.php';
       }
       $this->mostrarNoticiaLista();
     }
+
+    function modificarNoticia(){
+      if(isset($_REQUEST['id_not']) && isset($_REQUEST['not']) && isset($_REQUEST['desc']) && isset($_REQUEST['id_cat'])){
+        $this->noticiasModel->modificarNoticia($_REQUEST['id_not'],$_REQUEST['not'],$_REQUEST['desc'],$_REQUEST['id_cat']);
+      }
+      else{
+        $this->view->mostrarError('La noticia que intenta modificar no existe');
+      }
+      $this->mostrarNoticiaLista();
+    }
+
 
     function borrarNoticia(){
       if(isset($_REQUEST['id_not'])){

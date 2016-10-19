@@ -8,6 +8,7 @@
 <script src="js/bootstrap.min.js"></script>
 <!--JavaScript tabla-->
 <script src="js/navegacion.js"></script>
+<script src="js/noti.js"></script>
 
 </body>
 </html>
